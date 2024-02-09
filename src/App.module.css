@@ -19,6 +19,7 @@
 	align-items: center;
 	justify-content: flex-end;
 	border: 1px solid #0002;
+	box-shadow: 0 0 5px #0002 inset;
 	border-radius: 8px;
 	height: 40px;
 	font-weight: 600;
@@ -52,14 +53,19 @@
 	height: 70px;
 	width: 70px;
 	border: 1px solid #0002;
+	box-shadow: 1px 1px 2px #0002, 4px 4px 12px #fff inset;
 	border-radius: 16px;
-	background: #fff;
+	background: #fefefe;
 	color: #222;
 	outline: none;
 	cursor: pointer;
 	font-size: 1.75rem;
 	font-family: monospace;
-	transition: .3s;
+	transition: .1s;
+}
+
+.button:active {
+	box-shadow: 0 0 4px #0004 inset;
 }
 
 .button:hover {

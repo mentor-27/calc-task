@@ -16,7 +16,7 @@ export const App = () => {
 
 	function handlePlus() {
 		setIsResult(false);
-		if (!operand2) setOperator('+');
+		if (operand1 && !operand2) setOperator('+');
 		if (operand2) {
 			handleResult();
 			setOperator('+');
@@ -25,7 +25,7 @@ export const App = () => {
 
 	function handleMinus() {
 		setIsResult(false);
-		if (!operand2) setOperator('-');
+		if (operand1 && !operand2) setOperator('-');
 		if (operand2) {
 			handleResult();
 			setOperator('-');
