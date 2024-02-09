@@ -64,6 +64,10 @@
 	transition: .1s;
 }
 
+.digitsPanel .button:last-of-type {
+	flex-basis: calc(100% - 10px);
+}
+
 .button:active {
 	box-shadow: 0 0 4px #0004 inset;
 }
