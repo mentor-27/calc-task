@@ -1,0 +1,97 @@
+.app {
+	background: #fff;
+	border: 2px solid #0004;
+	border-radius: 16px;
+	width: 300px;
+	height: fit-content;
+	margin: 10% auto;
+	padding: 16px;
+}
+
+.calcBlock {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.display {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	border: 1px solid #0002;
+	border-radius: 8px;
+	height: 40px;
+	font-weight: 600;
+	margin-bottom: 8px;
+	padding-inline: 8px;
+	font-size: 1.75rem;
+	overflow: hidden;
+  text-wrap: nowrap;
+}
+
+.isResult {
+	color: #060;
+	border: 1px solid #060;
+	background: #efe;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: row;
+}
+
+.digitsPanel {
+	display: flex;
+	flex-direction: row-reverse;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	gap: 5px;
+}
+
+.button {
+	height: 70px;
+	width: 70px;
+	border: 1px solid #0002;
+	border-radius: 16px;
+	background: #fff;
+	color: #222;
+	outline: none;
+	cursor: pointer;
+	font-size: 1.75rem;
+	font-family: monospace;
+	transition: .3s;
+}
+
+.button:hover {
+	background: #eee;
+}
+
+.button.clear {
+	background: #fee;
+}
+
+.button.clear:hover {
+	background: #fdd;
+}
+
+.button.action {
+	background: #eef;
+}
+
+.button.action:hover {
+	background: #ddf;
+}
+
+.button.result {
+	background: #efe;
+}
+
+.button.result:hover {
+	background: #dfd;
+}
+
+.actionsPanel {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
