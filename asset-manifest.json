@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/calc-task/static/css/main.314373b2.css",
+    "main.js": "/calc-task/static/js/main.df391c27.js",
+    "index.html": "/calc-task/index.html",
+    "main.314373b2.css.map": "/calc-task/static/css/main.314373b2.css.map",
+    "main.df391c27.js.map": "/calc-task/static/js/main.df391c27.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.314373b2.css",
+    "static/js/main.df391c27.js"
+  ]
+}
