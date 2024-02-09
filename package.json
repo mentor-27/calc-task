@@ -1,6 +1,7 @@
 {
 	"name": "simple-calc",
 	"version": "1.0.0",
+	"homepage": "https://mentor-27.github.io/calc-task",
 	"private": true,
 	"dependencies": {
 		"eslint-config-prettier": "^9.1.0",
