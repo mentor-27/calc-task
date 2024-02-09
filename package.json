@@ -1,11 +1,8 @@
 {
-	"name": "my-app",
-	"version": "0.1.0",
+	"name": "simple-calc",
+	"version": "1.0.0",
 	"private": true,
 	"dependencies": {
-		"@testing-library/jest-dom": "^5.17.0",
-		"@testing-library/react": "^13.4.0",
-		"@testing-library/user-event": "^13.5.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-prettier": "^5.1.3",
 		"prettier": "^3.2.4",
@@ -16,9 +13,7 @@
 	},
 	"scripts": {
 		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"build": "react-scripts build"
 	},
 	"eslintConfig": {
 		"extends": [
