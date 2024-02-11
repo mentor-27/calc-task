@@ -39,14 +39,9 @@
 .buttons {
 	display: flex;
 	flex-direction: row;
-}
-
-.digitsPanel {
-	display: flex;
-	flex-direction: row-reverse;
 	flex-wrap: wrap;
-	justify-content: flex-end;
 	gap: 5px;
+	justify-content: center;
 }
 
 .button {
@@ -64,10 +59,6 @@
 	transition: .1s;
 }
 
-.digitsPanel .button:last-of-type {
-	flex-basis: calc(100% - 10px);
-}
-
 .button:active {
 	box-shadow: 0 0 4px #0004 inset;
 }
@@ -76,32 +67,30 @@
 	background: #eee;
 }
 
-.button.clear {
+.clear {
 	background: #fee;
 }
 
-.button.clear:hover {
+.clear:hover {
 	background: #fdd;
 }
 
-.button.action {
+.action {
 	background: #eef;
 }
 
-.button.action:hover {
+.action:hover {
 	background: #ddf;
 }
 
-.button.result {
+.result {
 	background: #efe;
 }
 
-.button.result:hover {
+.result:hover {
 	background: #dfd;
 }
 
-.actionsPanel {
-	display: flex;
-	flex-direction: column;
-	gap: 5px;
+.wide {
+	flex-basis: calc(75% - 5px);
 }

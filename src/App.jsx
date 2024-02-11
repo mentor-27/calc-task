@@ -42,11 +42,33 @@ export const App = () => {
 	}
 
 	function handleInput(num) {
-		if (operand1 === '0' && num === '0') return;
-		!operator ? setOperand1(prev => (prev += num)) : setOperand2(prev => (prev += num));
+		if (!operator) {
+			if (+operand1 >= Number.MAX_SAFE_INTEGER / 10) return;
+			if (operand1 === '0' && num === '0') return;
+			else setOperand1(prev => `${+(prev += num)}`);
+		} else {
+			if (+operand2 >= Number.MAX_SAFE_INTEGER / 10) return;
+			if (operand2 === '0' && num === '0') return;
+			else setOperand2(prev => `${+(prev += num)}`);
+		}
 	}
 
-	const NUMS = ['9', '8', '7', '6', '5', '4', '3', '2', '1', '0'];
+	const NUMS = [
+		{ sign: '7', func: handleInput },
+		{ sign: '8', func: handleInput },
+		{ sign: '9', func: handleInput },
+		{ sign: 'C', func: handleClear, style: 'clear' },
+		{ sign: '4', func: handleInput },
+		{ sign: '5', func: handleInput },
+		{ sign: '6', func: handleInput },
+		{ sign: '+', func: handlePlus, style: 'action' },
+		{ sign: '1', func: handleInput },
+		{ sign: '2', func: handleInput },
+		{ sign: '3', func: handleInput },
+		{ sign: '-', func: handleMinus, style: 'action' },
+		{ sign: '0', func: handleInput, style: 'wide' },
+		{ sign: '=', func: handleResult, style: 'result' },
+	];
 
 	return (
 		<div className={styles.app}>
@@ -55,34 +77,15 @@ export const App = () => {
 					{`${operand1} ${operator} ${operand2}`}
 				</div>
 				<div className={styles.buttons}>
-					<div className={styles.digitsPanel}>
-						{NUMS.map(num => (
-							<button
-								className={styles.button}
-								key={`${num}_${Date.now()}`}
-								onClick={() => handleInput(num)}
-							>
-								{num}
-							</button>
-						))}
-					</div>
-					<div className={styles.actionsPanel}>
-						<button className={`${styles.button} ${styles.clear}`} onClick={handleClear}>
-							C
-						</button>
-						<button className={`${styles.button} ${styles.action}`} onClick={handlePlus}>
-							+
-						</button>
-						<button className={`${styles.button} ${styles.action}`} onClick={handleMinus}>
-							-
-						</button>
+					{NUMS.map(({ sign, func, style }) => (
 						<button
-							className={`${styles.button} ${styles.result}`}
-							onClick={handleResult}
+							className={`${styles.button} ${style ? styles[style] : ''}`}
+							key={`${sign}_${Date.now()}`}
+							onClick={() => func(sign)}
 						>
-							=
+							{sign}
 						</button>
-					</div>
+					))}
 				</div>
 			</div>
 		</div>
